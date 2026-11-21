@@ -192,6 +192,11 @@ config SBSA_REF
     select IDE_BUS
     select IDE_DEV
 
+config GREMLIN
+    bool
+    default y
+    depends on TCG && AARCH64 && ARM_VIRT
+
 config SABRELITE
     bool
     default y
