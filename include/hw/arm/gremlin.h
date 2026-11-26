@@ -8,11 +8,13 @@
 OBJECT_DECLARE_TYPE(GremlinMachineState, GremlinMachineClass, GREMLIN_MACHINE)
 
 struct GremlinMachineState {
-  VirtMachineState parent_obj;
+    VirtMachineState parent_obj;
 };
 
 struct GremlinMachineClass {
-  VirtMachineClass parent_obj;
+    VirtMachineClass parent_obj;
+    // save VirtMachineClass init
+    void (*machvirt_init )(MachineState*);
 };
 
 #endif // !ARM_GREMLIN_H
